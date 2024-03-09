@@ -7,9 +7,10 @@ public class ejercicio2 {
         Producto leche = new Producto ("Leche",0.7) ;
         System.out.println(leche.getPrecioUnitario());
 
-        CuentaSupermercado productos = new CuentaSupermercado();
+        CuentaSupermercado productosDeJuan = new CuentaSupermercado();
         
-        System.out.println(productos);
+        productos.agregarProducto(leche);
+        productos.agregarProducto(jabon);
     
     
     
