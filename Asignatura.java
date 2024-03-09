@@ -3,9 +3,9 @@ public class Asignatura {
     private Double nota = 0.0;
 
     //Constructor
-    public Asignatura(String nombre){
+    public Asignatura(String nombre, Double nota){
         this.nombre = nombre;
-        
+        this.nota = nota;
     }
      
     public String getNombre(){
