@@ -1,16 +1,19 @@
 import java.util.ArrayList;
 
 public class Alumno {
+    // Atributos
     private String nombre;
     private String apellido;
     private ArrayList<Asignatura> asignaturas;
     
+    // Constructor
     public Alumno (String nombre, String apellido){
         this.nombre = nombre;
         this.apellido = apellido;
         this.asignaturas = new ArrayList<Asignatura>();
     }
 
+    // Getters y Setters de Nombre, apellido y el array List asignaturas
     public String getNombre(){
         return this.nombre;
     }
@@ -34,7 +37,8 @@ public class Alumno {
     public void setAsignaturas (ArrayList<Asignatura> listAsignaturas){
         this.asignaturas = listAsignaturas;
     }
-
+    
+    // Calcula el promedio de todas las notas en una variable aux
     public Double promedio(){
         double aux = 0.0;
         for (int i = 0; i < asignaturas.size(); i++) {
@@ -44,6 +48,7 @@ public class Alumno {
         return aux;
 
     }
+    // Boletín de notas, apoyado en método imprimirLinea 
     public String mostrarBoletin(){
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Alumno: %s %s %n", nombre, apellido));
@@ -56,7 +61,7 @@ public class Alumno {
         sb.append(this.imprimirLinea("Nota Media:", this.promedio().toString()));
         return sb.toString();
     }
-
+    // Método que calcula los espacios vacíos, se usa al momento de crear el boletín
     private String imprimirLinea(String texto1, String texto2) {
         String espacios = "";
 
@@ -70,11 +75,11 @@ public class Alumno {
     
         return String.format("%s%s%s%n", texto1, espacios, texto2);
     }
-  
+    // Método para añadir asignaturas en nuestro arrayList 
     public void agregarAsignatura(Asignatura asignatura){
         this.asignaturas.add(asignatura);
     }
-  
+    // Método para modificar la nota, de una asignatura x dentro de nuestro arrayList creado
     public void modificarNota(String nombreAsignatura, Double notaAsignatura){
         for (int i = 0; i < this.asignaturas.size(); i++){
             if (this.asignaturas.get(i).getNombre() == nombreAsignatura){
@@ -82,7 +87,7 @@ public class Alumno {
             }
         }
     }
-    
+    // Método para Saber la nota de una asignatura x que pida
     public void informarAsignatura(String nombreAsignatura){
         for (int i = 0; i < this.asignaturas.size(); i++){
             if (this.asignaturas.get(i).getNombre() == nombreAsignatura){

@@ -1,4 +1,5 @@
 public class Asignatura {
+    // Atributos
     private String nombre;
     private Double nota = 0.0;
 
@@ -7,7 +8,7 @@ public class Asignatura {
         this.nombre = nombre;
         this.nota = nota;
     }
-     
+    // Getters y Setters de Nombre y Nota
     public String getNombre(){
         return this.nombre;
     }

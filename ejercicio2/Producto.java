@@ -2,6 +2,7 @@ package ejercicio2;
     
 
 public class Producto {
+    // Atributos
     private String nombre;
     private Double precioUnitario;
 
@@ -10,6 +11,7 @@ public class Producto {
         this.nombre = nombre;
         this.precioUnitario = precioUnitario;
     }
+    // getters y setters de nombre y precioUnitario
     public String getNombre(){
         return this.nombre;
     }
